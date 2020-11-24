@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+    <link rel="stylesheet" href="css/style_prod.css">
 </head>
 <body>
     <?php
@@ -13,23 +14,23 @@
         $consulta="SELECT * FROM productos WHERE 1";
         $resultado=$objeto->consultar_datos($consulta);
     ?>
-    <div>
+    <div class= "contenedor">
         <nav>
             <h1>tienda comic</h1>
             <a href="index.html">registro</a>
             <a href="productos.php">productos</a>
         </nav>
-        <div>
+        <div class="box">
             <?php foreach($resultado as $resultados): ?>
-                <div>
+                <div class="tarjeta">
                     <img src="<?php echo $resultados['foto']; ?>" alt="imagen comic">
                     <p><?php echo $resultados['nombre']; ?> </p>
                     <p><?php echo $resultados['marca']; ?> </p>
                     <p><?php echo $resultados['precio']; ?> </p>
                     <p><?php echo $resultados['descripcion']; ?> </p>
-                    <div>
-                        <a onclick="abrir()">editar</a>
-                        <a href="php/eliminar_datos.php?id=<?php echo $resultados['id']; ?>">eliminar</a>
+                    <div class="botones">
+                        <a class="ed" onclick="abrir()">editar</a>
+                        <a class="el" href="php/eliminar_datos.php?id=<?php echo $resultados['id']; ?>">eliminar</a>
                     </div>
                 </div>
 
@@ -48,7 +49,9 @@
             <?php endforeach ?>
         
         </div>
-
+        <footer>
+            <span>&copy;todos los derechos reservados</span>
+        </footer>
 
     </div>
 </body>
