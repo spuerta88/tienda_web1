@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tienda comic</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="contenedor">
+        <nav>
+            <h1>tienda comic</h1>
+            <a href="productos.php">productos</a>
+            <a href="index.html">registro</a>
+        </nav>
+        <form action="php/agregar_datos.php" method="POST">
+            <div class="h3">
+              <h3>registro de compra</h3>  
+            </div>
+
+            <div class="form">
+                <input type="text" name="nombre"placeholder="nombre comic: ">
+                <input type="text" name="marca"placeholder="editorial del comic">
+                <input type="text" name="precio"placeholder="valor del comic">
+                <input type="text" name="imagen"placeholder="URL/IMAGEN">
+                <input type="text" name="descripcion"placeholder="descripcion del comic">
+                <input type="submit" name="registro"value="registrar">
+            </div>
+        </form>
+        <footer>
+            <span>todos los derechos reservados &copy;</span>
+        </footer>
+    </div>   
+</body>
+</html>
